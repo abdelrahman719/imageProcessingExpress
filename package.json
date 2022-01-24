@@ -16,14 +16,19 @@
     "@types/jasmine": "^3.10.3",
     "@types/prettier": "^2.4.3",
     "@types/sharp": "^0.29.5",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "eslint": "^8.7.0",
+    "prettier": "^2.5.1",
     "typescript": "^4.5.5"
   },
   "scripts": {
     "test": "npm run build && npm run jasmine && echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.ts",
     "build": "npx tsc",
-    "jasmine": "jasmine"
-
+    "jasmine": "jasmine",
+    "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
   },
   "author": "",
   "license": "ISC"

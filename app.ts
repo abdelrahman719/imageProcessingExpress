@@ -1,19 +1,22 @@
 import express from 'express';
 const app = express();
 
-import fs from 'fs';
 import { Resize } from './Modules/resize'
 
-import sharp from 'sharp';
 
 
 
 app.get('/', function (req, res) {
-  // Extract the query-parameter
+
+       // Extract the query-parameter
   const widthString: any = req.query.width
   const heightString: any = req.query.height
   const format: any = req.query.format
 
+
+
+
+  
   // Parse to integer if possible
   let width, height
   if (widthString) {

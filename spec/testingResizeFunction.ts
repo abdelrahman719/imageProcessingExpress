@@ -1,0 +1,1 @@
+describe("myResize image testing", function() { /* ... */ });
