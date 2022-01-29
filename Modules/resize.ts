@@ -12,6 +12,8 @@ function Resize(path: any, format: any, width: any, height: any) {
   if (width || height) {
     transform = transform.resize(width, height);
   }
+ 
+
 
   return readStream.pipe(transform);
 }
